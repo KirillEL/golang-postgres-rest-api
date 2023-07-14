@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/KirillEL/golang-postgres-rest-api/migrations"
-	"github.com/KirillEL/golang-postgres-rest-api/models"
-	"github.com/KirillEL/golang-postgres-rest-api/storage"
+	"github.com/KirillEL/golang-postgres-rest-api/internal/migrations"
+	"github.com/KirillEL/golang-postgres-rest-api/internal/models"
+	"github.com/KirillEL/golang-postgres-rest-api/internal/storage"
 	"github.com/gofiber/fiber/v2"
 	"github.com/joho/godotenv"
 	"gorm.io/gorm"
