@@ -10,6 +10,7 @@ import (
 	"gorm.io/gorm"
 	"log"
 	"net/http"
+	"os"
 )
 
 type Repository struct {
@@ -131,6 +132,9 @@ func main() {
 
 	app := fiber.New()
 	r.SetupRoutes(app)
-	app.Listen(":8085")
+	err = app.Listen(os.Getenv("PORT"))
+	if err != nil {
+		log.Fatal(err)
+	}
 
 }
